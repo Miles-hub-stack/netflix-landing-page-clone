@@ -1,0 +1,593 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Netflix Nigeria</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    .container {
+        position: relative;
+        background: linear-gradient(
+            to bottom,
+            rgba(0, 0, 0, 0) 0%,
+            rgba(0, 0, 0, 0.6) 100%
+          ),
+          linear-gradient(
+            to right,
+            rgba(0, 0, 0, 0.9),
+            rgba(0, 0, 0, 0.5),
+            rgba(0, 0, 0, 0.8)
+          ),
+          url("/NETFLIX/Netflix landing Image.jpg") center/cover no-repeat;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        z-index: -10;
+    }
+    .center {
+        position: absolute;
+        top: 200px;
+        width: 100%;
+        text-align: center;
+        color: white;
+        font-family: "Montserrat", sans-serif;
+        font-size: 55px;
+        font-weight: 800;
+    }
+    p.price {
+        position: absolute;
+        color: white;
+        top: 350px;
+        width: 100%;
+        text-align: center;
+        font-size: 18px;
+        font-family: "Montserrat", sans-serif;
+    }
+    .mail1 {
+        position: absolute;
+        color: white;
+        top: 395px;
+        width: 100%;
+        text-align: center;
+        font-size: 14px;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        padding-left: 20px;
+    }
+    .placeholder1 {
+        position: absolute;
+        top: 60%;
+        display: flex;
+    }
+    .placeholder1 input {
+        padding-left: 10px;
+        height: 50px;
+        font-size: 14px;
+        margin-top: 50px;
+        margin-left: 30px;
+        width: 400px;
+        padding-right: 150px;
+        border-radius: 5px;
+        background-color: transparent;
+        border-color: white;
+    }
+    .placeholder1 button {
+        background-color: red;
+        color: white;
+        width: 165px;
+        padding-left: 10px;
+        height: 50px;
+        font-size: 14px;
+        margin-top: 50px;
+        margin-left: 8px;
+        padding-right: 150px;
+        border-radius: 5px;
+        cursor: none;
+        border: none;
+        padding: 2px 3px;
+        font-family: "Montserrat", sans-serif;
+        font-size: large;
+    }
+    .curvedlogo {
+        position: absolute;
+        top: -50px;
+        left: 70px;
+        margin-left: 25px;
+    }
+    .button1 {
+        position: absolute;
+        top: 30px;
+        right: 70px;
+        color: white;
+        background-color: red;
+        width: 80px;
+        height: 30px;
+        border-radius: 5px;
+        border: none;
+        font-size: 16px;
+    }
+    .curve {
+        height: 30px;
+        width: 100%;
+        background: linear-gradient(to right, rgba(208, 14, 37, 255), #ff007a);
+        border-top-left-radius: 100% 40px;
+        border-top-right-radius: 100% 40px;
+        margin-top: -50px;
+        position: relative;
+    }
+    .curve2 {
+        position: relative;
+        height: 40px;
+        width: 100%;
+        background-color: black;
+        border-top-left-radius: 100% 40px;
+        border-top-right-radius: 100% 40px;
+        mix-blend-mode: multiply;
+        margin-top: -25px;
+        position: relative;
+        z-index: 1;
+    }
+    .line0{
+        position: absolute;
+        color: white;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        top: 650px;
+        left: 145px;
+        font-size: 25px;
+    }
+    .flex-container{
+        display: flex;
+        flex-wrap: wrap;
+        background-color: black;
+        height: 1000px;
+        gap: 30px;
+        justify-content: center;
+    }
+    .container2{
+        position: relative;
+        margin-top: 50px;
+        cursor: pointer;
+    }
+    .container2 img {
+        object-fit: cover;
+        border-radius: 12px;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        width: 180px;
+        height: 250px;
+    }
+    .container2 img:hover {
+        transform: scale(1.05);
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    }
+    .num1{
+        position: absolute;
+        color: black;
+        font-size: 130px;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        -webkit-text-stroke: 2px white;
+        top: 70px;
+        left: -30px;
+    }
+    .line1{
+        position: absolute;
+        color: white;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        top: 1000px;
+        left: 145px;
+        font-size: 25px;
+        margin-top: 20px;
+    }
+    .container3{
+        position: relative;
+        background: linear-gradient(135deg, #311438, #0f0f1a);
+        object-fit: cover;
+        border-radius: 12px;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        width: 250px;
+        height: 330px;
+        color: white;
+        font-family: "Montserrat", sans-serif;
+        margin-top: -575px;
+        left: 20px;
+    }
+    .bottom-right{
+        position: absolute;
+        bottom: 8px;
+        right: 10px;
+    }
+    .top1{
+        margin-left: 12px;
+        margin-top: 30px;
+        font-size: 22px;
+    }
+    .top2{
+        margin-left: 12px;
+        margin-top: 17px;
+        opacity: 0.7;
+        font-size: 15px;
+    }
+    .line2{
+        position: absolute;
+        color: white;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        top: 1450px;
+        left: 145px;
+        font-size: 25px;
+        margin-top: 20px;
+    }
+    .border1{
+        position: absolute;
+        color: white;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        top: 1600px;
+        left: 145px;
+        padding: 18.75px;
+        font-size: 23px;
+    }
+    div.border1{
+        border: 1px solid white;
+        width: 1000px;
+        height: 75px;
+        background-color: rgba(45,45,45,255);
+        border: none;
+        margin-top: -90px;
+    }
+    .border2{
+        position: absolute;
+        color: white;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        top: 1700px;
+        left: 145px;
+        padding: 18.75px;
+        font-size: 23px;
+    }
+    div.border2{
+        border: 1px solid white;
+        width: 1000px;
+        height: 75px;
+        background-color: rgba(45,45,45,255);
+        border: none;
+        margin-top: -110px;
+    }
+    .border3{
+        position: absolute;
+        color: white;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        top: 1800px;
+        left: 145px;
+        padding: 18.75px;
+        font-size: 23px;
+    }
+    div.border3{
+        border: 1px solid white;
+        width: 1000px;
+        height: 75px;
+        background-color: rgba(45,45,45,255);
+        border: none;
+        margin-top: -130px;
+    }
+    .border4{
+        position: absolute;
+        color: white;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        top: 1900px;
+        left: 145px;
+        padding: 18.75px;
+        font-size: 23px;
+    }
+    div.border4{
+        border: 1px solid white;
+        width: 1000px;
+        height: 75px;
+        background-color: rgba(45,45,45,255);
+        border: none;
+        margin-top: -150px;
+    }
+    .border5{
+        position: absolute;
+        color: white;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        top: 2000px;
+        left: 145px;
+        padding: 18.75px;
+        font-size: 23px;
+    }
+    div.border5{
+        border: 1px solid white;
+        width: 1000px;
+        height: 75px;
+        background-color: rgba(45,45,45,255);
+        border: none;
+        margin-top: -170px;
+    }
+    span.plus{
+        margin-left: 900px;
+    }
+    .mail2{
+        position: absolute;
+        color: white;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        text-align: center;
+        top: 2000px;
+        padding-left: 390px;
+        font-size: 16px;
+        margin-top: -25px;
+    }
+    .placeholder2 {
+        position: absolute;
+        top: 302%;
+        display: flex;
+    }
+    .placeholder2 input {
+        padding-left: 10px;
+        height: 50px;
+        font-size: 14px;
+        margin-top: 50px;
+        margin-left: 320px;
+        width: 550px;
+        padding-right: 150px;
+        border-radius: 5px;
+        background-color: transparent;
+        border-color: white;
+    }
+    .placeholder2 button {
+        background-color: red;
+        color: white;
+        width: 165px;
+        padding-left: 10px;
+        height: 50px;
+        font-size: 14px;
+        margin-top: 50px;
+        margin-left: 8px;
+        padding-right: 150px;
+        border-radius: 5px;
+        cursor: none;
+        border: none;
+        padding: 2px 3px;
+        font-family: "Montserrat", sans-serif;
+        font-size: large;
+    }
+    .line3{
+        position: absolute;
+        color: rgb(235, 222, 222);
+        top: 325%;
+        left: 145px;
+        text-decoration: none;
+    }
+
+    a {
+        /* text-decoration: none; */
+        color: white;
+    }
+    .question1{
+        position: absolute;
+        display: inline;
+        color: white;
+        left: 145px;
+        top: 334%;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-size: 15px;
+        opacity: 0.5;
+    }
+    .question2{
+        position: absolute;
+        display: inline;
+        color: white;
+        left: 400px;
+        top: 334%;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-size: 15px;
+        opacity: 0.5;
+    }
+    .question3{
+        position: absolute;
+        display: inline;
+        color: white;
+        left: 655px;
+        top: 334%;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-size: 15px;
+        opacity: 0.5; 
+    }
+    .question4{
+        position: absolute;
+        display: inline;
+        color: white;
+        left: 910px;
+        top: 334%;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-size: 15px;
+        opacity: 0,5;
+    }
+    .button2{
+        display: flex;
+        position: absolute;
+        color: white;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        top: 360%;
+        left: 145px;
+        border: 1px solid white;
+        width: 90px;
+        height: 25px;
+        border-radius: 3px;
+        justify-content: left;
+        padding-left: 2px;
+        gap: 10px;
+    }
+    .netflix{
+        position: absolute;
+        top: 368%;
+        color: white;
+        left: 145px;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-size: 14px;
+        opacity: 0.6;
+    }
+    .bot{
+        position: absolute;
+        color: white;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-size: 12px;
+        top: 375%;
+        left: 145px;
+        opacity: 0.5;
+    }
+    </style>
+</head>
+  <body>
+    <div class="container">
+        <p class="center">Unlimited movies, TV <br />shows, and more</p>
+        <p class="price">Starts at ₦2,500. Cancel anytime.</p>
+        <p class="mail1">Ready to watch? Enter your email to create or restart your membership.</p>
+        <div class="placeholder1">
+            <input type="email" placeholder="Email address">
+            <button>Get Started <i class="fa-solid fa-greater-than"></i> </button>
+        </div>
+          <div class="curvedlogo">
+            <img src="/PROJECT2/Netflix logo.png" alt="logo" />
+        </div>
+        <div>
+            <button class="button1"><b>Sign in</b></button>
+        </div>
+    </div>
+
+    <div>
+        <div class="curve"></div>
+        <div class="curve2"></div>
+    </div>
+
+    <div class="line0">Trending Now</div>
+
+    <div class="flex-container">
+        <div class="container2">
+            <img src="/NETFLIX/WhatsApp-Image-2025-07-18-at-11.44.33_035f16df-e1752848043519.png" alt="picture1">
+            <div class="num1">1</div>
+        </div>
+        <div class="container2">
+            <img src="/NETFLIX/Squid-Game-Season-3-poster.png" alt="picture2">
+            <div class="num1">2</div>
+        </div>
+        <div class="container2">
+            <img src="/NETFLIX/AAAABZlR-wnRbc0NA6818LE8KKlXiVGf30ecr2uVS5JHzQ3aWc6QNqJkR_RHmGyImlODpzhNuxx4f0q2SW8SXhvqgR1zU46xHLTVMgHmc2vqOVZHvKAHjROALIueuxh8DDGM-cHiQQ.png" alt="picture3">
+            <div class="num1">3</div>
+        </div>
+        <div class="container2">
+            <img src="/NETFLIX/image (1).png" alt="picture4">
+            <div class="num1">4</div>
+        </div>
+        <div class="container2">
+            <img src="/NETFLIX/resizing.flixster.png" alt="picture5">
+            <div class="num1">5</div>
+        </div>
+    </div>
+
+    <div class="line1">More Reasons to Join</div>
+
+    <div class="flex-container">
+        <div class="container3">
+            <p class="top1">Enjoy on your TV</p>
+            <P class="top2">Watch on Smart TVs, <br>Playstation, Xbox, <br>Chromecast, Apple TV, Blu- <br>ray players, and more.</P>
+            <div class="bottom-right"><img src="/NETFLIX/television.jpg" alt="television" width=" 60px" height="50px"></div>
+        </div>
+        <div class="container3">
+            <p class="top1">Download your <br>shows to watch <br>offline</p>
+            <p class="top2">Save your favorites easily and <br>always have something to <br>watch.</p>
+            <div class="bottom-right"><img src="/NETFLIX/download logo.webp" alt="download" width=" 60px" height="50px"></div>
+        </div>
+        <div class="container3">
+            <p class="top1">Watch everywhere</p>
+            <p class="top2">Stream unlimited movies and <br>TV shows on your phone, <br>tablet, laptop, and TV.</p>
+            <div class="bottom-right"><img src="/NETFLIX/round.jpg" alt="round" width=" 60px" height="50px"></div>
+        </div>
+        <div class="container3">
+            <p class="top1">Create profiles for <br>kids</h4>
+            <p class="top2">Send kids on adventures with <br>their favorite characters in a <br>space made just for them — <br>free with your membership.</p>
+            <div class="bottom-right"><img src="/NETFLIX/cartoon.jpg" alt="cartoon" width=" 60px" height="50px"></div>
+        </div>
+    </div>
+
+    <div class="line2">Frequently Asked Questions</div>
+
+    <div class="container4">
+        <div class="border1">
+            <span>What is Netflix?</span>
+            <i class="fa fa-plus" style="margin-left: 680px;"></i>
+        </div>
+        <div class="border2">
+            <span>How much does Netflix cost?</span>
+            <i class="fa fa-plus" style="margin-left: 530px;"></i>
+        </div>
+        <div class="border3">
+            <span>Where can I watch?</span>
+            <i class="fa fa-plus" style="margin-left: 530px;"></i>
+        </div>
+        <div class="border3">
+            <span>How do I cancel?</span>
+            <i class="fa fa-plus" style="margin-left: 670px;"></i>
+        </div>
+        <div class="border4">
+            <span>What can I watch on Netflix?</span>
+            <i class="fa fa-plus" style="margin-left: 530px;"></i>
+        </div>
+        <div class="border5">
+            <span>Is Netflix good for kids</span>
+            <i class="fa fa-plus" style="margin-left: 600px;"></i>
+        </div>
+    </div>
+
+    <div class="mail2">Ready to watch? Enter your email to create or restart your membership.</div>
+
+     <div class="placeholder2">
+        <input type="email" placeholder="Email address" />
+        <button>Get Started <i class="fa-solid fa-greater-than"></i> </button>
+    </div>
+
+    <p class="line3"><a href="#">Questions? Contact us.</a></p>
+
+    <div class="question1">
+        <P style="margin-bottom: 12px;"><a href="#">FAQ</a></P>
+        <P style="margin-bottom: 12px;"><a href="#">Investor Relations</a></P>
+        <p style="margin-bottom: 12px;"><a href="#">Privacy</a></p>
+        <p style="margin-bottom: 12px;"><a href="#">Speed Test</a></p>
+    </div>
+
+    <div class="question2">
+        <p style="margin-bottom: 12px;"><a href="#">Help Center</a></p>
+        <p style="margin-bottom: 12px;"><a href="#">Jobs</a></p>
+        <p style="margin-bottom: 12px;"><a href="#">Cookie Prefernces</a></p>
+        <p style="margin-bottom: 12px;"><a href="#">Legal Notices</a></p>
+    </div>
+
+    <div class="question3">
+        <p style="margin-bottom: 12px;"><a href="#">Account</a></p>
+        <p style="margin-bottom: 12px;"><a href="#">Ways to Wtach</a></p>
+        <p style="margin-bottom: 12px;"><a href="#">Cooperate information</a></p>
+        <p style="margin-bottom: 12px;"><a href="#">Only on Netflix</a></p>
+    </div>
+
+    <div class="question4">
+        <p style="margin-bottom: 12px;"><a href="#">Media center</a></p>
+        <p style="margin-bottom: 12px;"><a href="#">Terms of Use</a></p>
+        <p style="margin-bottom: 12px;"><a href="#">Contact Us</a></p>
+    </div>
+
+    <div class="button2">
+        <p>English</p>
+        <span><i class="fa fa-angle-down"></i></span>
+    </div>
+
+    <p class="netflix">Netflix Nigeria</p>
+
+    <p class="bot">This page is protected by Google reCAPTCHA to ensure you're not a bot. <a href="Learn">Learn More</a></p>
+
+  </body>
+</html>
